@@ -108,13 +108,68 @@
 
 
 
+<div class="section-padding section-instafeed row-fluid">
+    <div class="wrapper">
+        <div class="row-fluid">
+              <div class="span12 vertical-center"> 
+                    
+
+
+<div id="instafeed" class="masonary-grp"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+<script type="text/javascript">
+var feed = new Instafeed({
+get: 'user',
+userId: '10437388036',
+clientId: 'c6ed14bca1214d44b7762495a7760089',
+accessToken:'10437388036.1677ed0.7d27f709ecac41a18d1d855ba7d87675',
+limit: 12,
+resolution: 'low_resolution'
+});
+feed.run();
+</script>
+<script>
+jQuery(document).ready(function(e) {
+var $url = 'https://api.instagram.com/v1/users/10437388036/?access_token=10437388036.1677ed0.7d27f709ecac41a18d1d855ba7d87675';
+jQuery.ajax({
+method : "GET",
+url : $url,
+dataType : "jsonp",
+jsonp : "callback",
+success : function(data) {
+jQuery('#followers').prepend(data.data.counts.follows);
+jQuery('#followed-by').prepend(data.data.counts.followed_by);
+jQuery('#medias').prepend(data.data.counts.media);
+}
+});
+});
+
+
+</script>
+
+                    
+              </div>
+        </div>       
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 
 
 
 
 <!-- Start Section 2 -->
 
-<div class="section-2 row-fluid" >
+<div class="section-2 row-fluid" style="display:none;" >
 
 
 
@@ -604,6 +659,19 @@
 
 
 <script src="js/JQuery.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="https://cdn2.hubspot.net/hubfs/3842749/Event%20Microsite/masonry.min.js"></script>
+<script>
+$(window).load(function(){
+if ($(window).width() >= 768) { 
+var grid = document.querySelector('.masonary-grp');
+var msnry = new Masonry( grid, {
+// options...
+itemSelector: '#instafeed>a '
+});
+};
+});
+</script>
 
 
 
