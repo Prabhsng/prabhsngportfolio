@@ -1,4 +1,32 @@
 
+#instafeed a {
+    display: inline-block;
+    width: 30%;
+    margin: 1.5%;
+    box-shadow: -2px 5px 20px 0px rgba(0, 0, 0, 0.14);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+#instafeed a img {
+    width:100%;
+    margin-bottom: -8px;
+}
+
+
+@media (max-width:767px){
+
+
+#instafeed a {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+}
+
+
 .grid-container{
     position: fixed;
     left: 0;
