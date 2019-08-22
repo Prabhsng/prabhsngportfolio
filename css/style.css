@@ -1382,9 +1382,9 @@ body .row-fluid .design-portfolio-container {
 }
 
 .footer .social-icons a {
-    display: block;
-    text-align: left;
-    margin: 10px 0;
+     text-align: left;
+    margin: 0px 12px;
+    display: inline-block;
 }
 
 
