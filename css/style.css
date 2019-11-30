@@ -1308,11 +1308,11 @@ body .row-fluid .design-portfolio-container .design-container {
 }
 
 .header .row-fluid [class*="span"]:first-child {
-    width: 60%;
+    width: 54%;
 }
 
 .header .row-fluid [class*="span"]:last-child {
-    width: 40%;
+    width: 46%;
 }
 
 .align-right {
@@ -1387,9 +1387,10 @@ body .row-fluid .design-portfolio-container {
 }
 
 .footer .social-icons a {
-     text-align: left;
-    margin: 0px 12px;
+    text-align: left;
+    margin: 0px 5px;
     display: inline-block;
+    font-size: 14px;
 }
 
 
