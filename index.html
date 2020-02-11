@@ -24,16 +24,14 @@
       <div class="wrapper">      
           <div class="row-fluid col-auto-height" >
               <div class="span6">
-                 <a class="logo-text" href="#"> <h1>PRABHJOT SINGH</h1></a>
+
+                 <a class="logo-text" href="https://dribbble.com/prabhsng" target="_blank"> <h1>PRABHJOT SINGH</h1></a>
               </div>
               <div class="span6 align-right vertical-center">
 
                 <div class="social-icons">
                   <a class="mobile-hide" style="pointer-events:none;">Follow me:</a>
-                  <a href="https://www.behance.net/prabhsng" target="_blank"><i class="fa fa-behance"></i></a>
                   <a href="https://dribbble.com/prabhsng" target="_blank"><i class="fa fa-dribbble"></i></a>
-                                    <a href="https://www.instagram.com/my_chalk_board" target="_blank"><i class="fa fa-instagram"></i></a>
-                  <a href="https://www.linkedin.com/in/prabhjot-singh-61320111b" target="_blank"><i class="fa fa-linkedin"></i></a>
 
                   
                   
@@ -61,6 +59,7 @@
   <div class="span6 vertical-center">
 <div class="span12 heading">
   <h1>UI/UX<br>Designer<span>.</span></h1>
+  <p><p>Being a technology evangelist UI/UX designer/ Frontend developer. A seasoned HubSpot Certified software web developer with 4 years experitise in the field of design &amp; development. Experienced Interface Specialist with a demonstrated history of working in the information technology and services industry. Skilled in Sketch App, Figma, Web Design, Photoshop, Illustrator, Invision, Procreate, jQuery, HTML5, CSS3 and HubSpot.</p>
 </div>
   </div>
 
@@ -81,21 +80,6 @@
 
 <!--End Hero Section  -->
 
-<div class="section-padding section-1 row-fluid" style="background:url('https://raw.githubusercontent.com/Prabhsng/prabhsngportfolio.github.io/master/Images/bg/hello.png') fixed no-repeat;">
-    <div class="wrapper">
-        <div class="row-fluid">
-              <div class="span12 vertical-center"> 
-                    <div class="description">
-                        <p>Being a technology evangelist UI/UX designer/ Frontend developer. A seasoned HubSpot Certified software web developer with 4 years experitise in the field of design & development. Experienced Interface Specialist with a demonstrated history of working in the information technology and services industry. Skilled in Sketch App, Figma, Web Design, Photoshop, Illustrator, Invision, Procreate, jQuery, HTML5, CSS3 and HubSpot.</p>
-                    </div>
-                    <div class="text-margin-zero align-right">
-                    <h3>Prabhjot Singh</h3>
-                    <h4>– UI/UX Designer</h4>
-                  </div>
-              </div>
-        </div>       
-    </div>
-</div>
 
 
 
@@ -108,42 +92,8 @@
               <div class="span12 vertical-center"> 
                     
 
+<div id="shots"></div>
 
-<div></div>
-
-
-<div id="followers"></div>
-<div id="followed-by"></div>
-<div id="medias"></div>
-
-<div id="instafeed" class="masonary-grp"></div>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
-<script type="text/javascript">
-var feed = new Instafeed({
-get: 'user',
-userId: '10437388036',
-clientId: 'c6ed14bca1214d44b7762495a7760089',
-accessToken:'10437388036.1677ed0.82ebf20796e54f19b9876b2eca3591d2',
-limit: 999,
-resolution: 'standard_resolution'
-});
-feed.run();
-</script>
-<script>
-jQuery(document).ready(function(e) {
-var $url = 'https://api.instagram.com/v1/users/10437388036/?access_token=10437388036.1677ed0.7d27f709ecac41a18d1d855ba7d87675';
-jQuery.ajax({
-method : "GET",
-url : $url,
-dataType : "jsonp",
-jsonp : "callback"
-});
-});
-
-
-</script>
 
                     
               </div>
@@ -175,10 +125,7 @@ jsonp : "callback"
 <div class="social-icons">
 
 <a class="mobile-hide" style="pointer-events:none;">Follow me:</a>
-<a href="https://www.behance.net/prabhsng" target="_blank">Behance</a>
 <a href="https://dribbble.com/prabhsng" target="_blank">Dribbble</a>
-<a href="https://www.instagram.com/my_chalk_board" target="_blank">Instagram</a>  
-<a href="https://www.linkedin.com/in/prabhjot-singh-61320111b" target="_blank">Linkedin</a>
 
 </div>
   </div>
@@ -188,20 +135,9 @@ jsonp : "callback"
 
 
 
-<script src="js/JQuery.js" type="text/javascript" charset="utf-8"></script>
 
-<script src="https://cdn2.hubspot.net/hubfs/3842749/Event%20Microsite/masonry.min.js"></script>
-<script>
-$(window).load(function(){
-if ($(window).width() >= 768) { 
-var grid = document.querySelector('.masonary-grp');
-var msnry = new Masonry( grid, {
-// options...
-itemSelector: '#instafeed>a '
-});
-};
-});
-</script>
+
+<script src="js/JQuery.js" type="text/javascript" charset="utf-8"></script>
 
 
   
@@ -213,7 +149,44 @@ itemSelector: '#instafeed>a '
   gtag('js', new Date());
 
   gtag('config', 'UA-142705721-1');
+
+
+// Set the Access Token
+var accessToken = '0e18fec37ae0963f04a6b1cf2ba0481ffe3fa6ca3d83a007a4d6a7bfd8fe9b79';
+
+// Call Dribble v2 API
+$.ajax({
+    url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
+    dataType: 'json',
+    type: 'GET',
+    success: function(data) {  
+      if (data.length > 0) { 
+        $.each(data.reverse(), function(i, val) {                
+          $('#shots').prepend(
+            '<a class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.hidpi +'"/></a>'
+            )
+        })
+      }
+      else {
+        $('#shots').append('<p>No shots yet!</p>');
+      }
+    }
+});
+
+
+
+
 </script>
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
