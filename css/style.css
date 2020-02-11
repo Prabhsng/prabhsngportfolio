@@ -1429,9 +1429,9 @@ body .row-fluid .design-portfolio-container {
     border-radius: 34px;
 
 }
-@media only screen and (max-width: 779px) {
+@media only screen and (max-width: 767px) {
   #shots .shot {
-    width: 50%;
+    width: 100%;
   }
 }
 #shots .shot:hover img {
