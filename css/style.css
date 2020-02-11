@@ -1418,12 +1418,14 @@ body .row-fluid .design-portfolio-container {
   margin: auto;
 }
 #shots .shot {
-  position: relative;
-  display: block;
-  width: 33.33%;
-  background: #ea4c89;
-  color: white;
-  text-decoration: none;
+    position: relative;
+    display: block;
+    width: 50%;
+    background: #f7f7f7;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    box-sizing: border-box;
 }
 @media only screen and (max-width: 779px) {
   #shots .shot {
