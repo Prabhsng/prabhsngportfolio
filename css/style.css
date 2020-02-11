@@ -1477,6 +1477,7 @@ body .row-fluid .design-portfolio-container {
   }
     .section-instafeed .cta-button{
      display:block;   
+           margin: 40px auto 0;
     }
 }
 
