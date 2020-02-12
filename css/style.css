@@ -1433,24 +1433,23 @@ body .row-fluid .design-portfolio-container {
     overflow: hidden;
 
 }
-#shots .shot:hover img {
-  opacity: .1;
-}
 #shots .shot:hover .title {
-  opacity: 1;
+     bottom: 0;
 }
 #shots .shot .title {
-  position: absolute;
-  width: calc(100% - 2rem);
-  padding: 1rem;
-  opacity: 0;
-  -webkit-transition: opacity .2s ease-in-out;
-  transition: opacity .2s ease-in-out;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-weight: 600;
-  bottom: 0;
+    position: absolute;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: all .5s ease-in-out;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-weight: 800;
+    bottom: -100px;
+    background: #ffffff;
+    color: #000;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.3);
 }
 #shots .shot img {
     display: block;
