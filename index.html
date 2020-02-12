@@ -91,7 +91,7 @@
         <div class="row-fluid">
               <div class="span12 vertical-center"> 
                     
-
+<div class=" image_loader align-center"><img width="70" src="./images/Wedges-3s-200px.svg"></div>
 <div id="shots"></div>
 
 
@@ -163,7 +163,8 @@ $.ajax({
     type: 'GET',
     success: function(data) {  
       if (data.length > 0) { 
-        $.each(data.reverse(), function(i, val) {                
+        $.each(data.reverse(), function(i, val) {
+          $('.image_loader').hide();              
           $('#shots').prepend(
             '<a class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.hidpi +'"/></a>'
             )
