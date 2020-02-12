@@ -86,8 +86,8 @@
 
 
 
-<div class="section-padding section-instafeed row-fluid">
-    <div class="wrapper">
+<div class=" section-instafeed row-fluid ">
+    <div class="">
         <div class="row-fluid">
               <div class="span12 vertical-center"> 
                     
@@ -95,7 +95,7 @@
 <div id="shots"></div>
 
 
-<a class="cta-button" href="https://dribbble.com/prabhsng" target="_blank"">Check all Shots on Dribbble</a>
+<!--<a class="cta-button" href="https://dribbble.com/prabhsng" target="_blank"">Check all Shots on Dribbble</a>-->
 
                     
               </div>
@@ -158,7 +158,7 @@ var accessToken = '0e18fec37ae0963f04a6b1cf2ba0481ffe3fa6ca3d83a007a4d6a7bfd8fe9
 
 // Call Dribble v2 API
 $.ajax({
-    url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
+    url: 'https://api.dribbble.com/v2/user/shots/?page=1&per_page=999&access_token='+accessToken,
     dataType: 'json',
     type: 'GET',
     success: function(data) {  
