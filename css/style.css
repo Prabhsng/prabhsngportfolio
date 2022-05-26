@@ -1026,7 +1026,7 @@ body .header .nav-button {
     padding: 12px 18px;
     transition: all .2s ease-in-out;
     display: block;
-    width: 130px;
+    width: 150px;
     text-align: center;
     margin-right: 0;
     margin-left: auto;
@@ -1052,7 +1052,7 @@ body .header .nav-button {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 
